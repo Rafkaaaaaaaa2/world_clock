@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
+  <link rel="manifest" href="/manifest.json">
+  <title>World Time</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+</head>
+<body data-theme="dark">
+  <header>
+    <h1>World Time</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search cities..." aria-label="Search time zones">
+      <button id="refresh" aria-label="Refresh data"><i class="fas fa-sync"></i></button>
+      <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    </div>
+  </header>
+  <main id="time-cards" aria-live="polite"></main>
+  <section class="add-section">
+    <input type="text" id="add-input" placeholder="Add a city (e.g., London)" aria-label="Add new city">
+    <div id="suggestions" class="suggestions" role="listbox"></div>
+    <button id="add-button"><i class="fas fa-plus"></i> Add</button>
+  </section>
+  <div id="loading" class="loading"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
